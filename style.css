@@ -8,7 +8,6 @@ body {
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 h1 {
@@ -31,6 +30,7 @@ p {
   justify-self: center;
   max-width: 528px;
   background-color: gray;
+  padding-bottom: 18px;
 }
 
 .introducao {
@@ -38,7 +38,32 @@ p {
   margin: 0px 0px 37px 0px;
 }
 
+.introducao::before {
+  content: "";
+  width: 250px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(233, 61, 109, 1) 0%,
+    rgba(105, 91, 163, 1) 100%
+  );
+  position: absolute;
+  top: 560px;
+}
+
 .materia1 {
-  display: grid;
-  margin: 0;
+  margin: 0px;
+}
+
+.materia1::before {
+  content: "";
+  width: 155px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(118, 199, 207, 1) 0%,
+    rgba(103, 95, 166, 1) 100%
+  );
+  position: absolute;
+  bottom: -215px;
 }
