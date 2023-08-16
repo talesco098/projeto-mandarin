@@ -69,7 +69,6 @@ p {
 }
 
 .materia1 {
-  grid-column: 1;
   margin-bottom: 20px;
 }
 
@@ -87,7 +86,6 @@ p {
 }
 
 .materia2 {
-  grid-column: 2;
   margin-bottom: 20px;
 }
 
@@ -114,4 +112,29 @@ p {
   color: #646869;
   font-size: 12px;
   font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao {
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  .materia1,
+  .materia2 {
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  .introducao::before,
+  .materia1::before,
+  .materia2::before {
+    display: none;
+  }
 }
